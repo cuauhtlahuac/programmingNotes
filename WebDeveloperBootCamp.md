@@ -5,8 +5,21 @@
 - Statics is the same html,  css and js file
 - Dimamic when refresh the page send back diferent html, css and js files.
 - [**_stackshare.io/_**](https://stackshare.io/): To know the stack of some page
-
-
+### http in deep
+- **_postman_**: Tool for know request and debuging
+  - Request: get, post, put, delete ...
+    * GET: Retreave content, don't modify nothing in db, just asking for something. 
+  - Body
+  - Headers, metadata about the response
+    * Content type
+    * status code: there are different status codes
+    * date
+- Params: ?, q, =, &, for example: `https://www.reddit.com/search?q=beagle&type=link`
+- ip address
+- http request, response (as a cicle)
+- 
+___
+## Notes from the past.
 - Express = Routes, encargado de esuchar requerimientos y depues decidir que eviar de vuelta.
 - $npm install Express (--save, para guardarlo en el archivo Json.)
 - var express = require("express") = para llamar a Express
