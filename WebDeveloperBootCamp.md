@@ -17,6 +17,14 @@
 - Params: ?, q, =, &, for example: `https://www.reddit.com/search?q=beagle&type=link`
 - ip address
 - http request, response (as a cicle)
+### Introduction to Node
+- Server Code
+
+- **To start the server in Node files can use the code below in the app.js file:**
+
+       app.listen(3000,function(){//some code here...});
+    
+- **To run the file write** `node app.js` **in the terminal**
 - 
 ___
 ## Notes from the past.
