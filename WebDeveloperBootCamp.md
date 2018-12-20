@@ -25,7 +25,19 @@
        app.listen(3000,function(){//some code here...});
     
 - **To run the file write** `node app.js` **in the terminal**
-- 
+## Command Line
+- [Getting to Know the Command Line](https://www.davidbaumgold.com/tutorials/command-line/)
+- [Survival guide for Unix newbies](http://matt.might.net/articles/basic-unix/)
+- All commands have three parts: the utility, the flags, and the arguments.
+
+    Examples: 
+  - man $UTIL to take a manual of some utility like ls
+  - less $FILE to see the content of a file
+  - ls -l to see details of each directory file
+  - cp $FILE $LOCATION to copy. Copies the $FILE to the $LOCATION.
+  - mv $FILE $LOCATION to move.
+- **rm**= delete one file. **-rf**= Is a rm flag that delete all files inside a directory. It means recursive files.
+## Intro to Node
 ___
 ## Notes from the past.
 - Express = Routes, encargado de esuchar requerimientos y depues decidir que eviar de vuelta.
