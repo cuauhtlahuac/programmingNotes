@@ -38,6 +38,9 @@
   - mv $FILE $LOCATION to move.
 - **rm**= delete one file. **-rf**= Is a rm flag that delete all files inside a directory. It means recursive files.
 ## Intro to Node
+
+- Node is a Technology that allows us to run javascript code in the server side.
+- npm is a Node Package Manager for library use like express, next, or cat-me.
 ___
 ## Notes from the past.
 - Express = Routes, encargado de esuchar requerimientos y depues decidir que eviar de vuelta.
