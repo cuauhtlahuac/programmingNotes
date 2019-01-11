@@ -33,7 +33,7 @@ deleteMe();
 
 ### Make code concise and efficient as possible.
 
-## 1. Destructuring
+#### 1. Destructuring
   - **Base Code**
   ```js
 const turtle = {
@@ -70,7 +70,7 @@ function feedAnimal(animal){
 }
 ```
 
-## 2. Template literals
+#### 2. Template literals
 
  - **The ${``}**
 ```js
@@ -88,7 +88,7 @@ const bio2 = horseAge`This horse is ${horse.age}`;
 ```
 You can use like template and use to return multiple values!
 
-## 3. Spread sintax...
+#### 3. Spread sintax...
 
 - To explain I will adding the entire code below with comments, but basically, you can add multiples props and values without write line by line, it's write only once.
 
@@ -118,14 +118,14 @@ pokemons = [...pokemons, 'Pikachu', 'Snorlax', 'Charizard'];
 //Unshift...
 pokemonsUnshift = ['Pikachu', 'Snorlax', 'Charizard',...pokemons,];
 ```
-## 4. Loops...
+#### 4. Loops...
 
 Same case than before, I will explain with the code and his comments, but in short, the for and while loops can be replace for the new array methods, that in one line of code return the wished values.
 
 ```js
 const orders = [500, 30, 99, 15, 223];
 
-'BAD CODE...';
+//'BAD CODE...';
 // Multiples variables and process
 /*
 const total = 0;
@@ -134,15 +134,17 @@ const highValue = [];
 
 for(let i = 0; i<...)...
 */
-
+//'GOOD CODE...';
 // * With Modern array methods...
 
 // To calculate the total with array reduce
 // Use all back function with two arguments,
 // The first argument is the accumulate value
 // The second is the current value in the loop
-const total = orders.reduce(//line below will retun the total
-(accumulate,current)=>accumulate + current)
+const total = orders.reduce(
+//line below will retun the total
+(accumulate,current)=>accumulate + current
+)
 // To return a tax value use map
 const withTax = orders.map(v=>v * 1.1);
 // To return higher value use filter method.
@@ -154,6 +156,55 @@ console.log({
     withTax,
     highValue
 });
-
 ```
+### Async / Await.
+- promise have three states:
+ 1. Pending: You don't know if you will get that phone
+ 2. Fulfilled: Mom is happy, she buys you a brand new phone
+ 3. Rejected: Your mom is happy, she withholds the phone
+ 
+- Follow the code...
 
+```js
+const random = ()=>{
+    return Promise.resolve(Math.random());
+}
+
+// BAD Promise CODE...X
+/*
+const sumRandomAsyncNums = ()=>{
+    let first;
+    let second;
+    let third;
+    return random()
+    .then(v=>{
+        first = v;
+        console.log("first: ", {v})
+        return random()
+        .then(v =>{
+            second = v;
+            console.log("second: ", {v})
+            return random()
+            .then(v => {
+                third = v;
+                console.log("third: ", {v})
+                return first + second + third;
+            })
+        })
+    }) 
+}
+*/
+
+// GOOD CODE...OK
+// optimised is with ASYNC:
+
+const sumRandomAsyncNums = async()=>{
+    //Insted of .then better use await for each variable
+    const first = await random();
+    const second = await random();
+    const third = await random();
+    console.log(`result= ${first + second + third}`)
+}
+
+sumRandomAsyncNums()
+```
