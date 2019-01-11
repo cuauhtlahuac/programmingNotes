@@ -31,9 +31,9 @@ deleteMe();
 
 #### At this point you'r a debuggin expert...
 
-## Make code concise and efficient as possible.
+### Make code concise and efficient as possible.
 
-1. Destructuring
+## 1. Destructuring
   - **Base Code**
   ```js
 const turtle = {
@@ -70,7 +70,7 @@ function feedAnimal(animal){
 }
 ```
 
-2. Template literals
+## 2. Template literals
 
  - **The ${``}**
 ```js
@@ -88,7 +88,7 @@ const bio2 = horseAge`This horse is ${horse.age}`;
 ```
 You can use like template and use to return multiple values!
 
-3. Spread sintax...
+## 3. Spread sintax...
 
 - To explain I will adding the entire code below with comments, but basically, you can add multiples props and values without write line by line, it's write only once.
 
@@ -117,5 +117,43 @@ let pokemons = ['Arbok', 'Raichu', 'Sandshrew'];
 pokemons = [...pokemons, 'Pikachu', 'Snorlax', 'Charizard'];
 //Unshift...
 pokemonsUnshift = ['Pikachu', 'Snorlax', 'Charizard',...pokemons,];
+```
+## 4. Loops...
+
+Same case than before, I will explain with the code and his comments, but in short, the for and while loops can be replace for the new array methods, that in one line of code return the wished values.
+
+```js
+const orders = [500, 30, 99, 15, 223];
+
+'BAD CODE...';
+// Multiples variables and process
+/*
+const total = 0;
+const withTax = [];
+const highValue = [];
+
+for(let i = 0; i<...)...
+*/
+
+// * With Modern array methods...
+
+// To calculate the total with array reduce
+// Use all back function with two arguments,
+// The first argument is the accumulate value
+// The second is the current value in the loop
+const total = orders.reduce(//line below will retun the total
+(accumulate,current)=>accumulate + current)
+// To return a tax value use map
+const withTax = orders.map(v=>v * 1.1);
+// To return higher value use filter method.
+// This method only returns the true value
+//in this case only will return 500 and 223
+const highValue = orders.filter(v=>v > 100)
+console.log({
+    total,
+    withTax,
+    highValue
+});
+
 ```
 
