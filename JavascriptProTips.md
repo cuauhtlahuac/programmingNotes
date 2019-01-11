@@ -87,3 +87,35 @@ const bio2 = horseAge`This horse is ${horse.age}`;
 // it will be printing: This horse is old at 7 years
 ```
 You can use like template and use to return multiple values!
+
+3. Spread sintax...
+
+- To explain I will adding the entire code below with comments, but basically, you can add multiples props and values without write line by line, it's write only once.
+
+```js
+const pikachu = {name: 'pikachu'};
+const stats = {hp: 40, attack: 60, defense: 45};
+
+'Bad Object...'
+/*
+pikachu['hp'] = stats.hp;
+pikachu['attack'] = stats.attack;
+pikachu['defense'] = stats.defense;
+*/
+
+//const lvl0 = Object.assign(pikachu, stats);
+//const lvl1 = Object.assign(pikachu, {hp: 70});
+
+'Good Object...'
+const lvl0 = {...pikachu, ...stats};
+const lvl1 = {...pikachu, hp: 70};
+
+//in array spreed works like push method
+let pokemons = ['Arbok', 'Raichu', 'Sandshrew'];
+//if you want to add new Pockemons don't do pokemons.push('pikachu')
+//instead do:
+pokemons = [...pokemons, 'Pikachu', 'Snorlax', 'Charizard'];
+//Unshift...
+pokemonsUnshift = ['Pikachu', 'Snorlax', 'Charizard',...pokemons,];
+```
+
