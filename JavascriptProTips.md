@@ -68,4 +68,22 @@ function feedAnimal(animal){
   const { name, meal, diet } = animal;
   return `Feed ${name} ${meal} Kilos of ${diet}`;
 }
-```  
+```
+
+2. Template literals
+
+ - **The ${``}**
+```js
+`hola ${varName}, es un gusto`;
+```
+- **Wierd usage:** Instead of use (), you can use `` and pass it the arguments inside like...
+```js
+function horseAge(str, age){
+const ageStr = age > 5 ? 'old' : 'young';
+return `${str[0]}${ageStr} at ${age} years`;
+}
+//Look at instead of () I using `` that is weird but works
+const bio2 = horseAge`This horse is ${horse.age}`;
+// it will be printing: This horse is old at 7 years
+```
+You can use like template and use to return multiple values!
