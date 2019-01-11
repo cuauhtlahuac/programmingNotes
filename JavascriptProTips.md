@@ -34,3 +34,38 @@ deleteMe();
 ## Make code concise and efficient as possible.
 
 1. Destructuring
+  - **Base Code**
+  ```js
+const turtle = {
+  name: 'Bob',
+  legs: 4,
+  shell: true,
+  type: 'amphibios',
+  meal: 10,
+  diet: 'barries'
+}
+```  
+  - **Bad Code**
+```js
+function feedAnimal(animal){
+  return `Feed ${animal.name} ${animal.meal} Kilos of ${animal.diet}`;
+}
+```  
+  - **Good Code:** 
+  
+_Pass only the name of the props as argument_
+
+```js
+function feedAnimal({name, meal, diet}){
+  return `Feed ${name} ${meal} Kilos of ${diet}`;
+}
+```
+
+_Some People don't like brackets syntax so you might..._
+    
+```js
+function feedAnimal(animal){
+  const { name, meal, diet } = animal;
+  return `Feed ${name} ${meal} Kilos of ${diet}`;
+}
+```  
