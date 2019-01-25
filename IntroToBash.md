@@ -176,4 +176,11 @@ done
 ```
 NOTES:
 --
-When I write inside of the bash file the rute, all commands execute inside the rute, but doesn't affect the shell.
+- When I write inside of the bash file the rute, all commands execute inside the rute, but doesn't affect the shell.
+- Use tab key word.
+```sh
+#     tab                   Opens the current directory in a new tab
+#     tab [PATH]            Open PATH in a new tab
+#     tab [CMD]             Open a new tab and execute CMD
+#     tab [PATH] [CMD] ...  You can prob'ly guess
+```
