@@ -18,7 +18,7 @@ ___
 ___
 3.1- You need permissons to the file, run in your terminal:
 ```sh
-chmod 755 Documents/rnandroid.sh
+chmod 755 FILE
 ```
 ___
 4.- Inside of the script: 
