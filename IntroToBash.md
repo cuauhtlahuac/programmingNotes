@@ -16,6 +16,11 @@ ___
 --
  in the same folder were was placed with the command:  ./script.sh
 ___
+3.1- You need permissons to the file, run in your terminal:
+```sh
+chmod 755 Documents/rnandroid.sh
+```
+___
 4.- Inside of the script: 
 --
 to declare a variable only need the name and the assigment of value like : phrase="Hello World" and the call it with the $ symbol before the name of the variable.
