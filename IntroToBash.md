@@ -137,5 +137,43 @@ In the excercise I made this alias and use the final code created
 ```sh
 alias greet3 ='./script.sh 3'
 ```
+sp.- My Office examples
+--
+**First**
+```sh
+#!/bin/bash
+phrase="Hello to you!"
+echo $phrase
 
+first_greeting="Nice to meet you!"
+later_greeting="How are you?"
+greeting_occasion=0
+echo "How many times should I greet?"
+read greeting_limit
+while [ $greeting_occasion -lt $greeting_limit ]
+do
+if [ $greeting_occasion -lt 1 ]
+then
+echo $first_greeting
+else
+echo $later_greeting
+fi
+greeting_occasion=$((greeting_occasion + 1))
+done
 
+files=/Users/development/Documents/*
+
+for file in $files
+do
+echo $file
+done
+```
+```sh
+
+```
+```sh
+
+```
+NOTES:
+--
+When I write inside of the bash file the rute, all commands execute inside the rute, but doesn't affect the shell.
