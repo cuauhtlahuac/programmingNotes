@@ -40,13 +40,13 @@ fi
 fi = Ends the conditionals
 -lt = is one of the list of comparison operators wich is "less than"
 **Here is the list of comparison operators you can use within bash scripts:**
-Equal: -eq
-Not equal: -ne
-Less than or equal: -le
-Less than: -lt
-Greater than or equal: -ge
-Greater than: -gt
-Is null: -z
+* Equal: `-eq`
+* Not equal: `-ne`
+* Less than or equal: `-lev`
+* Less than: `-lt`
+* Greater than or equal: `-ge`
+* Greater than: `-gt`
+* Is null: `-z`
 ___
  6.- LOOPS:
 --
