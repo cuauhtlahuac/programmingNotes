@@ -1,7 +1,7 @@
 # MONGO DB
 
-1. Primero **descarga** (official page)[http://mongodb.com/]
-2. Descarga el servidor comunitario, (Community server)[https://www.mongodb.com/download-center/community]
+1. Primero **descarga** [official page](http://mongodb.com/)
+2. Descarga el servidor comunitario, [Community server](https://www.mongodb.com/download-center/community)
 3. Completa la instalacion
 4. **Importante!**: en c:/ root debe estar o debes crear la ruta data/db, aquí estará la configuración.
 
