@@ -1,4 +1,4 @@
-#MONGO DB
+# MONGO DB
 
 1. Primero **descarga** (official page)[http://mongodb.com/]
 2. Descarga el servidor comunitario, (Community server)[https://www.mongodb.com/download-center/community]
@@ -27,15 +27,15 @@ ejemplo:
 
 **Colecciones** conjunto de Documentos. Una Coleccion va a tener todos los usuarios, personas, productos ...
 
-###Usar Mongo...
+### Usar Mongo...
 
 1. Tenemos que **abrir dos archivos**, que hay que buscar en la carpeta donde se intaló mongo (C:\Program Files\MongoDB\Server\4.0\bin).
     * *Primero*, **mongod.exe**: este activará el servidor de Mongo, de aquí se va a alimentar el cliente.
     * *Seguno*, **mongo.exe** : Luego un cliente en este caso mongo. En él se ejecuan los comandos.
     
-##Crear
+## Crear
 + Para **crear una BD** usar comando ```>use miTienda```, **use** sirve para switchear si existe la base o para crearla.
-+ Para crear una **coleccion** para la base de datos de manera **implicita**, si no esta creada la crea ya **agrega un documento**_(registro en SQL)_. Escribe el comando **insert({})** dentro de la base en la terminal. Productos es el nombre de la colección.
++ Para crear una **coleccion** para la base de datos de manera **implicita**, si no esta creada la crea ya **agrega un documento** _(registro en SQL)_. Escribe el comando **insert({})** dentro de la base en la terminal. Productos es el nombre de la colección.
 ```js
 db.productos.insert({'id': '2','nombre': 'Camiseta M','valor': 15.0, 'stock': 5})
 ```
@@ -44,26 +44,26 @@ db.productos.insert({'id': '2','nombre': 'Camiseta M','valor': 15.0, 'stock': 5}
 db.createCollection("productos")
 ```
 
-##Ver
+## Ver
 + Para **ver todas las bases** usa ```>show dbs```, si no se ve la resien creada es que no tiene datos.
 + Para **ver todas la colecciones** escribir ```show collections```
 + Para **ver** lo que esta **dentro de la colección** escribir el nombre de la coleccion y los comandos **find()** and **pretty()**
 ```db.productos.find().pretty()```
 
-##Editar
+## Editar
 + Para **editar** un **Documento**_(regitro en sql)_, usar el comando **update({},{$set: {}})** Entre parentesis se pasan dos parámetros. El primero es el campo que tiene que cumplir el documento que voy a editar, por ejemplo el id. El segundo se pone lo que yo quiero poner se usa **$set** seguido de un objeto con la llave y el nuevo valor, también se pueden agregar nuevos campos y valores.
 **NOTA:**Hasta aquí solo se cambia **un solo documento**, si quicieramos cambiar todos los que cumplan cierta condicion, se debe agregar un **tercer parametro, {multi: true}**
 ```js
  db.productos.update({'id':'2'},{$set: {'valor': 20.36, 'nuevoCampo':'nuevo valor'}})
 ```
 
-##Eliminar
+## Eliminar
 + Para **eliminar un documento** usar **deleteOne({})**, primer parametro es el campo que queremos relacionar, como el id. ```js db.productos.deleteOne({'id': '2'})``` 
 + Para **eliminar colecciones** escribir el nombre de la colección y comando **drop** ```db.productos.drop()```
 + Para **eliminar una Base de Datos** asegurarnos que estamos dentro de la base de datos y luego escribir el comando **dropDatabase()** 
 ```db.dropDatabase()```
 
-##Consultas
+## Consultas
 + El comando para hacer consultas, es el comando **find()**. Para encontrar solo uno **findOne()**. El primer parametro es el o los campos y valor a buscar.
 ```js
 db.productos.find({'valor': 20.36})
