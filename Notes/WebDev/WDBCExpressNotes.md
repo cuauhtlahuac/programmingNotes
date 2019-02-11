@@ -37,3 +37,7 @@ app.get('/', function(req, res){
 }); 
 ```
 In your browser go to **http://localhost:3000/** and you can see a "_Hi there_".
+
+### Tricks.
++ Use a console dot log inside of a rute, this gonna apear in your bash not in browser.
++ Try any route with postman, to get more information.
