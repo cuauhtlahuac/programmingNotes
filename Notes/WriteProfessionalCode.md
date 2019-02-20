@@ -5,8 +5,20 @@ by Microsoft. [edx](https://courses.edx.org/courses/course-v1:Microsoft+DEV275x+
 
 ### Module 1 | Elements of Professional Code
 Introduction
+ * The elements of professional code.
+    + Writen in C# and .NET
+    + Source control system Git and Github
+    + Making code readeable and self-describing
+    + Being able to change code with confidence trough Unit testing
+    + Quality code review
+    + Privacy
+    + Sharing code and contributing
+    
+
 Setting up your Environment
+
 Source Control with Git and GitHub
+
 Write It Up with Markdown
 
 ### Module 2 | Communicate with Code
