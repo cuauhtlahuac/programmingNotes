@@ -40,7 +40,12 @@
 ## Intro to Node
 
 - Node is a Technology that allows us to run javascript code in the server side.
-- npm is a Node Package Manager for library use like express, next, or cat-me.
+- npm is a Node Package Manager by you can use libraries, like express, next, or cat-me.
+- To use a node package you need to write all in console to install the package ```npm install packageName```, if you want to save the packe as reference write npm init, that initialize a package.json file, it only needs a little information and after the name of package write the flag --save to save it.
+- Any package will save in node module directory and you can call in your app with the require method and the string name of the package that you need requiring. ```require('package')```. Save it in a variable so you can using.
+- It's important to read the Documentation of the package.
+
+## Express 
 ___
 ## Notes from the past.
 - Express = Routes, encargado de esuchar requerimientos y depues decidir que eviar de vuelta.
