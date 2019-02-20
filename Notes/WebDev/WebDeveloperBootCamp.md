@@ -46,7 +46,26 @@
 - It's important to read the Documentation of the package.
 
 ## Express 
+pendign
 ___
+
+## APIs.
+What's an API.
+
+[BBVA](https://bbvaopen4u.com/en/actualidad/apis-dummies-five-easy-ways-know-more-about-them)
+
+[Wikipedia](https://es.wikipedia.org/wiki/Interfaz_de_programaci%C3%B3n_de_aplicaciones)
+
+[OMDB API](http://www.omdbapi.com/)
+
+[IFTTT](https://ifttt.com/)
+
+[Directory of APIs](https://www.programmableweb.com/)
+
+- Use an API to connect with other apps. API means Aplication Program Interface. 
+- To connect with an API route in our app we used [request](https://github.com/request/request) ```js var request = require("request");``` and use his methods. A better solution is use [Request Promise](https://github.com/request/request-promise).
+
+
 ## Notes from the past.
 - Express = Routes, encargado de esuchar requerimientos y depues decidir que eviar de vuelta.
 - $npm install Express (--save, para guardarlo en el archivo Json.)
