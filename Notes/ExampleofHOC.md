@@ -25,7 +25,7 @@ export default LogicHoc;
 
 In the import file you only save the Hoc in a new  variable:
 
-```
+```js
 import LogicHoc from "./LogicHoc";
 
 const LogicComponent = LogicHoc(Component);
