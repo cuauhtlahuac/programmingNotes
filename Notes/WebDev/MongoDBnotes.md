@@ -89,3 +89,5 @@ db.productos.find({'valor': {$lt: 30.0}})
     $or: [{key2: {$lt: value2},{key3: value3}}]
 }
 ```
+
+[Mongo DB university](https://university.mongodb.com/courses/M001/about?utm_campaign=T5_V3_DEV_AM_E4_M101_A&utm_medium=email&utm_source=Eloqua)

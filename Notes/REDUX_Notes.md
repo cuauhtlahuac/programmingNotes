@@ -39,6 +39,73 @@ Notes:
 
 Hay caso en el que un reductor puede decirle a otros reductores que hacer, esos despachadores no escuchan al despachador.
 
-
 Los reductores son como los que escuchan la accion y hacen algo, todos los reductores escuchan la accion, pero no todos hacen algo:
 por ejemplo en un walmart llega una caja de tomates y en el altavoz lo dicen, y todos los demas pasillos escuchan, el pasillo de jitomates va por la caja y la suma, la  tienda cambia, pero el de bolillos se queda parado y su pasillo no cambia , regresa su pasillo como está, en cambio el pasillo de jugos debe poner una promoción. La accion cerrar la tienda indica a todos que deben poner un listón y apagar sus luces. Todas las acciones potencialmente afectan de alguna forma la tienda; por default regresan el state. Puede haber multiples tiendas.
+
+* ! En el reductor me equivoque, regrese el Initial state, pero tenia que regrear el current store.
+
+
+Sample Code...
+```js
+// Type to reducer
+import typeToReducer from "type-to-reducer";
+import { store } from "../../../App";
+
+const INITIAL_STATE = {
+  toggle: false
+};
+
+// Creo dos acciones, una para motrar y otra para ocultar
+const SHOW_TOGGLE_MODAL = "puf/app/show/toggle/modal";
+const HIDE_TOGGLE_MODAL = "puf/app/hide/toggle/modal";
+
+// Action Creator
+function toggleModalMentions(toggle = false) {
+  if (toggle)
+    return {
+      type: SHOW_TOGGLE_MODAL,
+      payload: toggle
+    };
+  else {
+    return {
+      type: HIDE_TOGGLE_MODAL,
+      payload: toggle
+    };
+  }
+}
+
+// * Aqui despacho la accion que se va a ejecutar
+export function dispatchToggleAction(toggle) {
+  console.log({ toggle });
+  store.dispatch(toggleModalMentions(toggle));
+}
+
+// Type to reducer
+/*
+const toggleModal = typeToReducer({
+  [SHOW_TOGGLE_MODAL]: (state, action) => {
+    return Object.assign({}, state, { toggle: true });
+  },
+  INITIAL_STATE
+});
+*/
+
+// Reducer, escucha la accion
+
+const toggleModal = (state = INITIAL_STATE, action) => {
+  if (action.type === SHOW_TOGGLE_MODAL) {
+    console.log("%c REDUCER WAS EJECUTED", "color: deeppink; font-size: 8pt");
+    return Object.assign({}, state, { toggle: true });
+  } else if (action.type === HIDE_TOGGLE_MODAL) {
+    return Object.assign({}, state, { toggle: false });
+  } else {
+    return state;
+  }
+};
+
+export default toggleModal;
+
+```
+
+
+
